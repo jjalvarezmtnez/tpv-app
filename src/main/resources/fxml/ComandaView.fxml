@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane styleClass="screen-container"
+           xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.jhonatan.tfg.tpv.controller.ComandaController">
+
+    <VBox spacing="16"
+          alignment="CENTER"
+          styleClass="card-container"
+          maxWidth="900">
+
+        <!-- Cabecera de la vista -->
+        <Label text="Gestión de Comanda"
+               styleClass="title-label" />
+
+        <!-- Información general de la comanda -->
+        <HBox spacing="24" alignment="CENTER">
+            <Label fx:id="mesaLabel"
+                   text="Mesa: -"
+                   styleClass="info-label" />
+
+            <Label fx:id="estadoComandaLabel"
+                   text="Estado: -"
+                   styleClass="info-label" />
+
+            <Label fx:id="totalLabel"
+                   text="Total: 0,00 €"
+                   styleClass="section-label" />
+        </HBox>
+
+        <Separator />
+
+        <!-- Tabla de líneas de comanda -->
+        <Label text="Líneas de comanda"
+               styleClass="section-label" />
+
+        <VBox styleClass="table-wrapper"
+              prefWidth="760">
+            <TableView fx:id="lineasTableView"
+                       prefWidth="760"
+                       prefHeight="230">
+                <columns>
+                    <TableColumn fx:id="productoLineaColumn"
+                                 text="Producto" />
+                    <TableColumn fx:id="cantidadLineaColumn"
+                                 text="Cantidad" />
+                    <TableColumn fx:id="precioLineaColumn"
+                                 text="Precio" />
+                    <TableColumn fx:id="subtotalLineaColumn"
+                                 text="Subtotal" />
+                    <TableColumn fx:id="accionesLineaColumn"
+                                 text="Acciones" />
+                </columns>
+            </TableView>
+        </VBox>
+
+        <Separator />
+
+        <!-- Formulario para añadir productos -->
+        <Label text="Añadir producto"
+               styleClass="section-label" />
+
+        <HBox spacing="12" alignment="CENTER">
+            <ComboBox fx:id="productoComboBox"
+                      promptText="Selecciona un producto"
+                      prefWidth="280" />
+
+            <TextField fx:id="cantidadField"
+                       promptText="Cantidad"
+                       prefWidth="140" />
+        </HBox>
+
+        <!-- Información del producto seleccionado -->
+        <HBox spacing="24" alignment="CENTER">
+            <Label fx:id="precioProductoLabel"
+                   text="Precio: -"
+                   styleClass="info-label" />
+
+            <Label fx:id="stockDisponibleLabel"
+                   text="Stock disponible: -"
+                   styleClass="info-label" />
+        </HBox>
+
+        <!-- Acción de alta de línea -->
+        <HBox spacing="12" alignment="CENTER">
+            <Button fx:id="anadirProductoButton"
+                    text="Añadir producto"
+                    onAction="#handleAnadirProducto"
+                    styleClass="primary-button" />
+        </HBox>
+
+        <Separator />
+
+        <!-- Acciones principales de la comanda -->
+        <HBox spacing="12" alignment="CENTER">
+            <Button fx:id="cerrarComandaButton"
+                    text="Cerrar comanda"
+                    onAction="#handleCerrarComanda"
+                    styleClass="primary-button" />
+
+            <Button fx:id="anularComandaButton"
+                    text="Anular comanda"
+                    onAction="#handleAnularComanda"
+                    styleClass="danger-button" />
+
+            <Button text="Volver a mesas"
+                    onAction="#handleVolverMesas"
+                    styleClass="secondary-button" />
+        </HBox>
+
+        <!-- Mensajes de estado -->
+        <Label fx:id="mensajeLabel"
+               styleClass="message-label" />
+
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,334 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+}
+
+/* =========================
+   CONTENEDORES
+   ========================= */
+
+.screen-container {
+    -fx-padding: 32;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+.card-container {
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-padding: 32;
+    -fx-spacing: 18;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.14), 18, 0.22, 0, 6);
+    -fx-max-width: 720;
+}
+
+/* =========================
+   TEXTOS
+   ========================= */
+
+.title-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0f172a;
+}
+
+.subtitle-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #64748b;
+}
+
+.section-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1e293b;
+}
+
+.info-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #334155;
+}
+
+.label {
+    -fx-text-fill: #1e293b;
+}
+
+/* =========================
+   CAMPOS
+   ========================= */
+
+.text-field,
+.password-field,
+.combo-box {
+    -fx-pref-width: 280;
+    -fx-max-width: 280;
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1;
+    -fx-padding: 9 12 9 12;
+}
+
+.text-field:hover,
+.password-field:hover,
+.combo-box:hover {
+    -fx-border-color: #94a3b8;
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused {
+    -fx-border-color: #2563eb;
+    -fx-effect: dropshadow(gaussian, rgba(37, 99, 235, 0.25), 8, 0.15, 0, 0);
+}
+
+.combo-box .list-cell {
+    -fx-padding: 8 10 8 10;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.button {
+    -fx-background-radius: 10;
+    -fx-padding: 11 18 11 18;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-cursor: hand;
+    -fx-min-width: 130;
+}
+
+.button:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.button:disabled {
+    -fx-opacity: 0.55;
+    -fx-cursor: default;
+}
+
+.primary-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.secondary-button {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #0f172a;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #cbd5e1;
+}
+
+.danger-button {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+}
+
+.danger-button:hover {
+    -fx-background-color: #b91c1c;
+}
+
+/* Botones pequeños usados dentro de TableView */
+.table-action-secondary,
+.table-action-danger {
+    -fx-min-width: 28;
+    -fx-pref-width: 28;
+    -fx-max-width: 28;
+    -fx-min-height: 22;
+    -fx-pref-height: 22;
+    -fx-max-height: 22;
+    -fx-padding: 0;
+    -fx-font-size: 10px;
+    -fx-font-weight: 700;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.table-action-secondary {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #0f172a;
+}
+
+.table-action-danger {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+}
+
+/* =========================
+   LISTAS
+   ========================= */
+
+.list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1;
+    -fx-padding: 6;
+}
+
+.list-view:focused {
+    -fx-border-color: #2563eb;
+}
+
+.list-cell {
+    -fx-padding: 10 12 10 12;
+    -fx-background-color: transparent;
+    -fx-text-fill: #1e293b;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 8;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #dbeafe;
+    -fx-text-fill: #1e3a8a;
+    -fx-background-radius: 8;
+    -fx-font-weight: 600;
+}
+
+/* =========================
+   TABLAS
+   ========================= */
+
+.table-wrapper {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1;
+    -fx-padding: 1;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.table-view:focused {
+    -fx-border-color: transparent;
+}
+
+.table-view .viewport {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-height: 34;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0f172a;
+    -fx-alignment: center;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-cell-size: 34;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #f8fafc;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #dbeafe;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #1e3a8a;
+    -fx-font-weight: 600;
+}
+
+.table-cell {
+    -fx-font-size: 13px;
+    -fx-text-fill: #1e293b;
+    -fx-padding: 8 10 8 10;
+    -fx-alignment: center;
+    -fx-border-color: transparent;
+}
+
+/* Oculta el scroll horizontal de tablas para evitar ruido visual */
+.table-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}
+
+/* =========================
+   MENSAJES
+   ========================= */
+
+.message-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-wrap-text: true;
+}
+
+.message-success {
+    -fx-text-fill: #15803d;
+}
+
+.message-error {
+    -fx-text-fill: #b91c1c;
+}
+
+.message-warning {
+    -fx-text-fill: #b45309;
+}
+
+.message-info {
+    -fx-text-fill: #1d4ed8;
+}
+
+/* =========================
+   STOCK
+   ========================= */
+
+.stock-normal {
+    -fx-text-fill: #475569;
+    -fx-font-weight: 600;
+}
+
+.stock-low {
+    -fx-text-fill: #b45309;
+    -fx-font-weight: 700;
+}
+
+.stock-empty {
+    -fx-text-fill: #b91c1c;
+    -fx-font-weight: 800;
+}

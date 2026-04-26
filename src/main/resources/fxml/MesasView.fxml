@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane styleClass="screen-container"
+           xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.jhonatan.tfg.tpv.controller.MesasController">
+
+    <VBox spacing="16"
+          alignment="CENTER"
+          styleClass="card-container"
+          maxWidth="720">
+
+        <!-- Cabecera -->
+        <Label text="Gestión de Mesas"
+               styleClass="title-label" />
+
+        <Label text="Selecciona una mesa para abrir o consultar su comanda"
+               styleClass="subtitle-label" />
+
+        <!-- Tabla de mesas -->
+        <TableView fx:id="mesasTableView"
+                   prefWidth="520"
+                   prefHeight="260">
+            <columns>
+                <TableColumn fx:id="numeroMesaColumn"
+                             text="Mesa" />
+
+                <TableColumn fx:id="estadoMesaColumn"
+                             text="Estado" />
+            </columns>
+        </TableView>
+
+        <!-- Mesa seleccionada -->
+        <Label fx:id="mesaSeleccionadaLabel"
+               text="Ninguna mesa seleccionada"
+               styleClass="info-label" />
+
+        <!-- Acciones principales -->
+        <HBox spacing="12" alignment="CENTER">
+            <Button fx:id="abrirComandaButton"
+                    text="Abrir / Ver Comanda"
+                    onAction="#handleAbrirComanda"
+                    styleClass="primary-button" />
+
+            <Button text="Volver al menú"
+                    onAction="#handleVolverMenu"
+                    styleClass="secondary-button" />
+        </HBox>
+
+        <Separator />
+
+        <!-- Administración de mesas (solo administradores) -->
+        <VBox fx:id="gestionMesasBox"
+              spacing="12"
+              alignment="CENTER">
+            <Label text="Administración de Mesas"
+                   styleClass="section-label" />
+
+            <TextField fx:id="numeroMesaField"
+                       promptText="Número de mesa" />
+
+            <HBox spacing="12" alignment="CENTER">
+                <Button text="Crear"
+                        onAction="#handleCrearMesa"
+                        styleClass="primary-button" />
+
+                <Button fx:id="actualizarMesaButton"
+                        text="Actualizar"
+                        onAction="#handleActualizarMesa"
+                        styleClass="primary-button" />
+
+                <Button fx:id="eliminarMesaButton"
+                        text="Eliminar"
+                        onAction="#handleEliminarMesa"
+                        styleClass="danger-button" />
+            </HBox>
+        </VBox>
+
+        <!-- Mensajes de estado -->
+        <Label fx:id="mensajeLabel"
+               styleClass="message-label" />
+
+    </VBox>
+
+</StackPane>

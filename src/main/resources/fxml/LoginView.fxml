@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane styleClass="screen-container"
+           xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.jhonatan.tfg.tpv.controller.LoginController">
+
+    <VBox spacing="16"
+          alignment="CENTER"
+          styleClass="card-container"
+          maxWidth="460">
+
+        <!-- Cabecera de login -->
+        <Label text="TPV Gestión de Comandas"
+               styleClass="title-label" />
+
+        <Label text="Accede con tus credenciales"
+               styleClass="subtitle-label" />
+
+        <Separator />
+
+        <!-- Formulario de autenticación -->
+        <TextField fx:id="usernameField"
+                   promptText="Usuario"
+                   prefWidth="280" />
+
+        <PasswordField fx:id="passwordField"
+                       promptText="Contraseña"
+                       prefWidth="280" />
+
+        <!-- Acción principal -->
+        <Button text="Iniciar sesión"
+                onAction="#handleLogin"
+                styleClass="primary-button"
+                prefWidth="280" />
+
+        <!-- Mensajes de estado -->
+        <Label fx:id="mensajeLabel"
+               styleClass="message-label" />
+
+    </VBox>
+
+</StackPane>
