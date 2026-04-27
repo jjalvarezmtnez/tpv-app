@@ -85,10 +85,13 @@ src/
  │   ├── java/
  │   │   └── com/jhonatan/tfg/tpv/
  │   │       ├── controller/
+ │   │       ├── dao/
  │   │       ├── database/
  │   │       ├── model/
- │   │       ├── repository/
  │   │       ├── service/
+ │   │       ├── util/
+ │   │       ├── ConsoleTestRunner.java
+ │   │       ├── Main.java
  │   │       └── MainJavaFX.java
  │   └── resources/
  │       ├── css/
