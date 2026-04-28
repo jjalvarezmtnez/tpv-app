@@ -111,14 +111,14 @@ Versión funcional completa previa a la entrega del Proyecto Final de Desarrollo
 ## Mejoras futuras
 
 - Exportación de informes a PDF.
-- Auten cación avanzada (OAuth).
+- Autenticación avanzada (OAuth).
 - Aplicación móvil complementaria.
 - Panel web para consulta remota.
-- Estadís cas avanzadas con compara vas temporales.
+- Estadísticas avanzadas con comparativas temporales.
 - Despliegue en entorno cliente-servidor con base de datos remota.
 - Pasarela de pagos real.
-- Impresión real de ckets.
-- Mul usuario concurrente en red.
+- Impresión real de tickets.
+- Multiusuario concurrente en red.
 - Predicción avanzada de ventas.
 
 ---
